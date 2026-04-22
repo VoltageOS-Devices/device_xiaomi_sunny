@@ -11,12 +11,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from sunny device
 $(call inherit-product, device/xiaomi/sunny/device.mk)
 
-# Inherit some common PixelOS stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
-TARGET_BOOT_ANIMATION_RES := 1080
+# Inherit some common VoltageOS stuff.
+$(call inherit-product, vendor/voltage/config/common_full_phone.mk)
+
+# Voltage Flags
+TARGET_BOOT_ANIMATION_RES := 1920
+VOLTAGE_BUILD_TYPE := OFFICIAL
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := aosp_sunny
+PRODUCT_NAME := voltage_sunny
 PRODUCT_DEVICE := sunny
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := M2101K7AG
